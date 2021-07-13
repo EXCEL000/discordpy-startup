@@ -14,6 +14,7 @@ async def on_ready():
     print(discord.__version__)
     text_channels.send("Translator is Enabled! | 翻訳機能が有効になりました！")
 
+@bot.event
 async def on_message(message):
     if translator.detect(message) == (lang = en, confidence > 0.9):
         await  message.channel.send(translator.translate(message,src='en', dest='jp'))
