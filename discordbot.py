@@ -3,7 +3,7 @@ from googletrans import Translator
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='/')
+bot = discord.Client()
 token = os.environ['DISCORD_BOT_TOKEN']
 translator = Translator()
 
